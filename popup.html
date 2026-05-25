@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahan NetPulse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="icon48.png" alt="" class="brand-icon">
+        <div>
+          <h1>Sahan NetPulse</h1>
+          <p id="status-text">Idle</p>
+        </div>
+      </div>
+      <button id="toggle-btn" class="power-btn" type="button" aria-label="Start pinger">
+        <span class="power-symbol">OFF</span>
+      </button>
+    </header>
+
+    <section class="health-strip" id="health-strip">
+      <div>
+        <span class="metric-label">Health</span>
+        <strong id="health-value">Idle</strong>
+      </div>
+      <div>
+        <span class="metric-label">Avg RTT</span>
+        <strong id="rtt-value">--</strong>
+      </div>
+      <div>
+        <span class="metric-label">Loss</span>
+        <strong id="loss-value">--</strong>
+      </div>
+    </section>
+
+    <section class="controls">
+      <label>
+        <span>Profile</span>
+        <select id="profile-select">
+          <option value="youtube">YouTube helper</option>
+          <option value="dialog">Dialog HBB</option>
+          <option value="hutch">Hutch</option>
+          <option value="mobitel">Mobitel</option>
+          <option value="airtel">Airtel</option>
+          <option value="slt">SLT / Fiber</option>
+          <option value="balanced">Balanced</option>
+          <option value="custom">Custom URLs</option>
+        </select>
+      </label>
+
+      <div class="control-grid">
+        <label>
+          <span>Interval</span>
+          <select id="interval-select">
+            <option value="30">30 seconds</option>
+            <option value="45">45 seconds</option>
+            <option value="60" selected>1 minute</option>
+            <option value="120">2 minutes</option>
+            <option value="300">5 minutes</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Probe burst</span>
+          <select id="burst-select">
+            <option value="1">1 request</option>
+            <option value="2">2 requests</option>
+            <option value="3">3 requests</option>
+            <option value="4">4 requests</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        <span>Timeout</span>
+        <select id="timeout-select">
+          <option value="3500">3.5 seconds</option>
+          <option value="5500">5.5 seconds</option>
+          <option value="8000">8 seconds</option>
+          <option value="12000">12 seconds</option>
+        </select>
+      </label>
+
+      <div class="youtube-boost">
+        <label class="toggle-row">
+          <input id="youtube-boost-toggle" type="checkbox">
+          <span>YouTube assist</span>
+        </label>
+        <label>
+          <span>Rescue cooldown</span>
+          <select id="boost-interval-select">
+            <option value="30">30 seconds</option>
+            <option value="60">1 minute</option>
+            <option value="120">2 minutes</option>
+            <option value="180">3 minutes</option>
+          </select>
+        </label>
+      </div>
+
+      <label id="custom-url-wrap" class="hidden">
+        <span>Custom probe URLs</span>
+        <textarea id="custom-urls" rows="3" spellcheck="false" placeholder="https://www.example.com/favicon.ico"></textarea>
+      </label>
+
+      <div class="button-row">
+        <button id="save-btn" type="button">Save</button>
+        <button id="ping-now-btn" type="button">Ping now</button>
+        <button id="reset-btn" type="button">Reset</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><span>Cycles</span><strong id="cycles-value">0</strong></div>
+      <div><span>OK</span><strong id="ok-value">0</strong></div>
+      <div><span>Failed</span><strong id="failed-value">0</strong></div>
+      <div><span>Worst streak</span><strong id="streak-value">0</strong></div>
+    </section>
+
+    <section class="youtube-panel">
+      <div><span>YouTube</span><strong id="youtube-state-value">Inactive</strong></div>
+      <div><span>Boosts</span><strong id="boost-count-value">0</strong></div>
+      <div><span>Stalls</span><strong id="stall-count-value">0</strong></div>
+    </section>
+
+    <section class="log">
+      <div class="section-title">Recent probes</div>
+      <div id="log-list" class="log-list">
+        <div class="empty">No probe cycles yet.</div>
+      </div>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Sahan NetPulse",
+  "version": "2.2.1",
+  "description": "Connection warmer and YouTube stability assistant for Dialog HBB and other fixed wireless links.",
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.gstatic.com/*",
+    "https://www.google.com/*",
+    "https://www.youtube.com/*",
+    "https://i.ytimg.com/*",
+    "https://selfcare.dialog.lk/*",
+    "https://www.dialog.lk/*",
+    "https://one.one.one.one/*",
+    "https://cloudflare-dns.com/*",
+    "https://www.cloudflare.com/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon128.png",
+      "48": "icon48.png",
+      "16": "icon16.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": [
+        "youtube-watch.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  }
+}
