@@ -343,7 +343,7 @@ async function maybeNotify(state) {
   await chrome.notifications.create({
     type: 'basic',
     iconUrl: 'icon128.png',
-    title: 'Sahan NetPulse: connection unstable',
+    title: 'NetPulse: connection unstable',
     message: 'Three probe cycles failed in a row. Your link may be congested or temporarily stalled.'
   });
 }

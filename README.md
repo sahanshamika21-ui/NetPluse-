@@ -1,8 +1,8 @@
-# Sahan NetPulse
+# NetPulse
 
 A Chrome Manifest V3 extension that keeps a fixed wireless connection lightly active, watches YouTube playback, and records short-term stability signals.
 
-Sahan NetPulse is an independent project inspired by the original Z Pinger concept. It uses its own name, branding, icon set, and implementation while keeping the same broad idea: lightweight connection warming and stability visibility.
+NetPulse is an independent project inspired by the original Z Pinger concept. It uses its own name, branding, icon set, and implementation while keeping the same broad idea: lightweight connection warming and stability visibility.
 
 ## What it does
 
@@ -21,7 +21,7 @@ Sahan NetPulse is an independent project inspired by the original Z Pinger conce
 2. Open Chrome and go to `chrome://extensions`.
 3. Enable **Developer mode**.
 4. Click **Load unpacked**.
-5. Select the cloned `Sahan NetPulse` extension folder.
+5. Select the cloned `NetPulse` extension folder.
 
 ## Recommended YouTube setup
 
@@ -53,8 +53,8 @@ If the video buffer is below 5 seconds, keep probe burst at **1 request**. If th
 
 ## Privacy
 
-Sahan NetPulse stores settings and probe history locally in Chrome extension storage. It does not collect analytics, send telemetry, or upload browsing history to a server.
+NetPulse stores settings and probe history locally in Chrome extension storage. It does not collect analytics, send telemetry, or upload browsing history to a server.
 
 ## Attribution
 
-This project was inspired by the original Z Pinger app/extension idea. Sahan NetPulse is a separate, independently branded implementation and is not affiliated with the original project.
+This project was inspired by the original Z Pinger app/extension idea. NetPulse is a separate, independently branded implementation and is not affiliated with the original project.

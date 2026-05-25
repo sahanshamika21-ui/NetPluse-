@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Sahan NetPulse",
+  "name": "NetPulse",
   "version": "2.2.1",
   "description": "Connection warmer and YouTube stability assistant for Dialog HBB and other fixed wireless links.",
   "permissions": [
